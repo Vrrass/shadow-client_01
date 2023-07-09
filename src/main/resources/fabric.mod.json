@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "shadow-client",
+	"version": "${version}",
+	"name": "Shadow Client",
+	"description": "Shadow Client!",
+	"authors": [
+		"Vras"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/shadow-client/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.shadow.mods.ShadowClientMods"
+		],
+		"Client": [
+			"net.shadow.ShadowC"
+		],
+		"fabric-datagen": [
+			"net.shadow.mods.ShadowModDataGenerator"
+		]
+	},
+	"mixins": [
+		"shadow-client.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
